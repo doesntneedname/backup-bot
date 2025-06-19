@@ -1,0 +1,9 @@
+services:
+  daily-backup:
+    container_name: daily-backup
+    build: .
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    restart: unless-stopped
